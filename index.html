@@ -55,6 +55,8 @@ function handleComplete(evt,comp) {
 	canvas.style.display = 'block';
 	exportRoot = new lib.ui();
 	stage = new lib.Stage(canvas);	
+	createjs.Touch.enable(stage);
+	stage.enableMouseOver();
 	//Registers the "tick" event listener.
 	fnStartAnimation = function() {
 		stage.addChild(exportRoot);
